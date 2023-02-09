@@ -1,0 +1,14 @@
+.myİnput {
+    font-size: 15px;
+    outline: solid 3px #8e8e8e;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 19px;
+}
+
+.myİnput:focus {
+    outline: solid 3px #373737;
+}

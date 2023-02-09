@@ -1,4 +1,16 @@
 .myBtn {
     padding: 10px 15px;
-    background-color: red;
+    background-color: inherit;
+    border: solid 2px #616161;
+    color:  #616161;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+
+.myBtn:hover {
+    border: solid 2px #616161;
+    background-color: #616161;
+    color: #ffffff;
 }
