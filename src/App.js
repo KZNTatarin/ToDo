@@ -7,9 +7,6 @@ import './styles/app.css';
 function App() {
 
     const [tasks, setTasks] = useState([
-        { id: 1, body: 'Тестовый текст для task',  },
-        { id: 2, body: 'Тестовый текст для task 2',  },
-        { id: 3, body: 'Тестовый текст для task 3', },
     ])
 
     const createTask = (newTask) => {
@@ -17,14 +14,22 @@ function App() {
     }
 
     const removeTask = (task) => {
-        setTasks(tasks.filter (p => p.id !== task.id))
+        setTasks(tasks.filter(p => p.id !== task.id))
     }
+
+    const checkTask = (task) => {
+        setTasks(tasks.map(p =>
+            p.id === task.id ? { ...task, status: !task.status } : task
+        ))
+    }
+
+    console.log(tasks)
 
     return (
         <div className="App">
-            <Create remove create={createTask}/>
+            <Create remove create={createTask} />
             <h1>ToDo</h1>
-            <TaskList remove={removeTask} tasks={tasks}/>
+            <TaskList check={checkTask} remove={removeTask} tasks={tasks} />
         </div>
     );
 }

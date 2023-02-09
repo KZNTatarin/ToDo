@@ -16,6 +16,7 @@ const Create = ({create}) => {
             id: Date.now(),
             body: createİnput,
             date: taskDate,
+            status: true,
         }
         create(newTask)
         setCreateİnput('')
