@@ -8,7 +8,7 @@ const Taskİtem = (props) => {
                 <button
                     onClick={() => props.check(props.task)}
                     className="check-btn circle-btn">✔</button>
-                <div style={{textDecoration: !props.task.status ? 'line-through' : '' }}>{props.task.body}</div>
+                <div style={{textDecoration: !props.task.status ? 'line-through' : '',  opacity: !props.task.status ? 0.3 : '' }}>{props.task.body}</div>
                 <button
                     onClick={() => props.remove(props.task)}
                     className="delete-btn circle-btn">

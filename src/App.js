@@ -18,10 +18,11 @@ function App() {
     }
 
     const checkTask = (task) => {
-        setTasks(tasks.map(p =>
-            p.id === task.id ? { ...task, status: !task.status } : task
-        ))
-    }
+        const newArray = tasks.map((todo) =>
+          todo.id === task.id ? { ...todo, status: !task.status } : todo
+        );
+        setTasks(newArray);
+      };
 
     console.log(tasks)
 
